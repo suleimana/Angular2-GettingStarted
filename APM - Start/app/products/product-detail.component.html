@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class="panel-body" *ngIf="product">
+        <div class="row">
+            <div class="col-xs-4">
+                <img [src]='product.imageUrl'[title]="product.productName | lowercase" >
+            </div>
+
+            <div class="col-xs-6 col-xs-offset-2">
+                <ul>
+                    <li><span class="lead text-primary">Product Name:</span> {{product.productName}}</li>
+                    <li><span>Product Code:</span> {{product.productCode}}</li>
+                    <li>Release Date: {{product.releaseDate}}</li>
+                    <li>Price: {{product.price}}</li>                
+                    <li>Star Rating: {{product.starRating}}</li>                
+                    <li>Description: {{product.description}}</li>                
+                </ul>
+
+            </div>
+
+
+        </div>
+        
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-default" (click)="onBack()">back</a>
+    </div>
+
+
+
+</div>
